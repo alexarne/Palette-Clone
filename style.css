@@ -29,94 +29,130 @@ body {
 
 #gallery-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 #gallery {
-    height: 140vmax;
-    width: 140vmax;
+    height: 190vh;
+    width: 160vw;
 }
 
 .tile {
     position: absolute;
-    border-radius: 1vmax;
-    transition: transform 500ms ease;
+    border-radius: 0.5vmax;
+    transition: transform 800ms ease;
+}
+
+.tile > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 800ms ease, transform 800ms ease;
+    pointer-events: none;
 }
 
 .tile:hover {
     transform: scale(1.1);
 }
 
+.tile:hover > img {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
 .tile:nth-child(1) {
-    background-color: rgb(255, 238, 88);
+    background-color: #8e87a8;
+    height: 9%;
+    width: 5%;
+    left: 15%;
+    top: 30%;
+}
+  
+.tile:nth-child(2) {
+    background-color: #dde5d8;
+    height: 10%;
+    width: 14%;
+    left: 28%;
+    top: 36%;
+}
+  
+.tile:nth-child(3) {
+    background-color: #415a4a;
+    height: 10%;
+    width: 8%;
+    left: 50%;
+    top: 34%;
+}
+  
+.tile:nth-child(4) {
+    background-color: rgb(102, 187, 106);
     height: 14%;
     width: 20%;
     left: 5%;
     top: 5%;
-  }
-  
-  .tile:nth-child(2) {
-    background-color: rgb(66, 165, 245);
-    height: 24%;
-    width: 14%;
-    left: 42%;
-    top: 12%;
-  }
-  
-  .tile:nth-child(3) {
-    background-color: rgb(239, 83, 80);
-    height: 18%;
-    width: 16%;
-    left: 12%;
-    top: 34%;
-  }
-  
-  .tile:nth-child(4) {
-    background-color: rgb(102, 187, 106);
-    height: 14%;
-    width: 12%;
-    left: 45%;
-    top: 48%;
-  }
-  
-  .tile:nth-child(5) {
+}
+
+.tile:nth-child(5) {
     background-color: rgb(171, 71, 188);
     height: 16%;
     width: 32%;
     left: 8%;
     top: 70%;
-  }
-  
-  .tile:nth-child(6) {
+}
+
+.tile:nth-child(6) {
     background-color: rgb(255, 167, 38);
     height: 24%;
     width: 24%;
     left: 68%;
     top: 8%;
-  }
-  
-  .tile:nth-child(7) {
+}
+
+.tile:nth-child(7) {
     background-color: rgb(63, 81, 181);
     height: 16%;
     width: 20%;
     left: 50%;
     top: 74%;
-  }
-  
-  .tile:nth-child(8) {
+}
+
+.tile:nth-child(8) {
     background-color: rgb(141, 110, 99);
     height: 24%;
     width: 18%;
     left: 72%;
     top: 42%;
-  }
-  
-  .tile:nth-child(9) {
+}
+
+.tile:nth-child(9) {
     background-color: rgb(250, 250, 250);
     height: 10%;
     width: 8%;
     left: 84%;
     top: 84%;
-  }
+}
+
+#link-container {
+    position: absolute;
+    /* z-index: -99; */
+    bottom: 0%;
+    right: 0%;
+    background-color: var(--background-color);
+    /* border: 1px solid black; */
+    border-radius: 100vw;
+    padding: 0px 7px;
+    margin: 10px;
+}
+
+#link-text {
+    /* background-color: red; */
+    display: inline;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+#link-text a {
+    color: black;
+    text-decoration: none;
+}
